@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Proizvod extends Model
 {
     use HasFactory;
+
+
+    public function kategorija()
+    {
+        return $this->belongsTo(Kategorija::class);
+    }
+
+    
+
 }

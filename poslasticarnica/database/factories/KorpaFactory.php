@@ -14,7 +14,7 @@ class KorpaFactory extends Factory
     public function definition()
     {
         return [
-            //
+             'key'  => 123
         ];
     }
 }

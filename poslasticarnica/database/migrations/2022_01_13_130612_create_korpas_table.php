@@ -15,6 +15,8 @@ class CreateKorpasTable extends Migration
     {
         Schema::create('korpas', function (Blueprint $table) {
             $table->id();
+            $table->string('key');
+            $table->unsignedInteger('user_id')->nullable(); 
             $table->timestamps();
         });
     }

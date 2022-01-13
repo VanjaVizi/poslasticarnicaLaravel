@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class StavkaKorpe extends Model
 {
     use HasFactory;
+
+    public function korpa( )
+    {
+        return $this->belongsTo(Korpa::class);
+    }
+
+    public function proizvod( )
+    {
+        return $this->hasOne(Proizvod::class);
+    }
+
+
+
 }

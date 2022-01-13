@@ -36,11 +36,11 @@ class DatabaseSeeder extends Seeder
          $ps = new ProizvodSeeder();
          $ps->run();
 
-         $sks= new StavkaKorpeSeeder();
-         $sks->run();
+       //  $sks= new StavkaKorpeSeeder();
+      //   $sks->run();
 
-         $korpaS= new KorpaSeeder();
-         $korpaS->run();
+         //$korpaS= new KorpaSeeder();
+        // $korpaS->run();
 
 
 

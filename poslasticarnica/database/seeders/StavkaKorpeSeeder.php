@@ -14,6 +14,6 @@ class StavkaKorpeSeeder extends Seeder
      */
     public function run()
     {
-        StavkaKorpe::factory(15)->create();
+      //  StavkaKorpe::factory(15)->create();
     }
 }

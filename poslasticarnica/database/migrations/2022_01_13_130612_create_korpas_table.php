@@ -14,9 +14,13 @@ class CreateKorpasTable extends Migration
     public function up()
     {
         Schema::create('korpas', function (Blueprint $table) {
-            $table->id();
-            $table->string('key');
+            $table->string('id');
+            $table->string('key');  
+           
+            $table->string('content');
+
             $table->unsignedInteger('user_id')->nullable(); 
+            $table->primary('id');
             $table->timestamps();
         });
     }

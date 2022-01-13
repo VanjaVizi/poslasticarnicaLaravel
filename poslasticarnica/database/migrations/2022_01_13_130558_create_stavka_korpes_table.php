@@ -17,11 +17,12 @@ class CreateStavkaKorpesTable extends Migration
             $table->id();
             $table->foreignId('korpa_id');
             $table->foreignId('proizvod_id');
+            $table->foreignId('user_id');
           
            
            
             $table->integer('kolicina');
-            $table->double('cena');
+            $table->double('cena')->default(random_int(100,15000));
             $table->timestamps();
         });
     }

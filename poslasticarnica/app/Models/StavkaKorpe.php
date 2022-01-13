@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class StavkaKorpe extends Model
 {
     use HasFactory;
-
+    protected $fillable = ['korpa_id','kolicina','proizvod_id','user_id'];
+    
     public function korpa( )
     {
         return $this->belongsTo(Korpa::class);

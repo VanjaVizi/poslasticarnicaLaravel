@@ -15,6 +15,7 @@ class RenameColumnCenaToUkupnaCenaInStavkakorpasTable extends Migration
     {
         Schema::table('stavka_korpes', function (Blueprint $table) {
             $table->renameColumn('cena','ukupna_cena');
+            //$table->double('ukupna_cena')->default(0);
         });
     }
 

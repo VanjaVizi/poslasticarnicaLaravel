@@ -15,13 +15,13 @@ class CreateStavkaKorpesTable extends Migration
     {
         Schema::create('stavka_korpes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('korpa_id');
-            $table->unsignedInteger('proizvod_id');
-            $table->foreign('korpa_id')->references('id')->on('korpas')->onDelete('cascade');
-            $table->foreign('proizvod_id')->references('id')->on('proizvods')->onDelete('cascade');
-            $table->double('cena');
-            $table->int('kolicina');
+            $table->foreignId('korpa_id');
+            $table->foreignId('proizvod_id');
           
+           
+           
+            $table->integer('kolicina');
+            $table->double('cena');
             $table->timestamps();
         });
     }

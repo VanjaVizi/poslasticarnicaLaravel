@@ -17,8 +17,8 @@ class StavkaKorpeFactory extends Factory
     {
         return [
             'proizvod_id' => $p= Proizvod::find(random_int(1,Proizvod::count())),
-            'korpa_id' =>  Korpa::find(random_int(1,Korpa::count())),
-            'kolicina' => $k= $this->faker()->random_int(1,10) ,
+            'korpa_id' => 1, //Korpa::find(random_int(1,Korpa::count())),
+            'kolicina' =>  $k= $this->faker->numberBetween($min = 1, $max = 10),
             'ukupna_cena'=>  $p->cena * $k
         ];
     }
